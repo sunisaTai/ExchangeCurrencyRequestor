@@ -1,14 +1,208 @@
-<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+     xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:form="http://www.springframework.org/tags/form" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
-  <spring:message var="app_name" code="application_name" htmlEscape="false" />
-  <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
-  <util:panel id="title" title="${title}">
-    <h3>
-      <spring:message code="welcome_h3" arguments="${app_name}" />
-    </h3>
-    <p>
-      <spring:message code="welcome_text" />
-    </p>
-  </util:panel>
+
+  <spring:url value="/resources/images/header.jpg" var="url_background"/>
+  <spring:url value="/resources/images/card1.png" var="card1"/>
+  <spring:url value="/resources/images/card2.jpg" var="card2"/>
+  <spring:url value="/resources/images/card3.jpg" var="card3"/>
+  <spring:url value="/resources/images/logo.png" var="logo"/>
+
+  <style>
+
+
+    #index-banner {
+      background: url("${url_background}") no-repeat center center ;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    #sectionid{
+      background-color: rgba(67, 160, 71,0.5);
+      height: 500px;
+    }
+
+    .strike {
+      color: #263238;
+      display: block;
+      overflow: hidden;
+      padding: 55px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .strike > span {
+      display: inline-block;
+      position: relative;
+    }
+
+    .strike > span::before, .strike > span::after {
+      background: #263238 none repeat scroll 0 0;
+      content: "";
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      width: 9999px;
+    }
+
+    .strike > span::before {
+      margin-right: 15px;
+      right: 100%;
+    }
+
+    .strike > span::after {
+      left: 100%;
+      margin-left: 15px;
+    }
+
+    .strike h4 {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    div .row.center{
+      margin-bottom: 0;
+    }
+
+    h1{
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .card-img1{
+      background: url("${card1}")no-repeat;
+      height: 320px;
+    }
+
+    .card-img2{
+      background: url("${card2}")no-repeat  center center;
+      height: 320px;
+    }
+
+    .card-img3{
+      background: url("${card3}")no-repeat center center;
+      height: 320px;
+    }
+
+    #img1,#img2,#img3{
+      background-color: rgba(176, 190, 197,0.7);
+      height: 320px;
+    }
+
+    #reveal1{
+       background-color: Transparent;
+       background-repeat:no-repeat;
+       border: none;
+       cursor:pointer;
+       overflow: hidden;
+       outline:none;
+       margin-top: 70px;
+       margin-left: 110px;
+     }
+
+    #reveal2,#reveal3{
+      background-color: Transparent;
+      background-repeat:no-repeat;
+      border: none;
+      cursor:pointer;
+      overflow: hidden;
+      outline:none;
+      margin-top: 100px;
+      margin-left: 140px;
+    }
+  </style>
+
+  <div id="index-banner">
+    <section id="sectionid">
+      <div class="container">
+        <br/><br/><br/><br/>
+        <div class="row center">
+          <img src="${logo}" height="150px"/>
+        </div>
+        <h1 class="header center white-text"><b>อัตราค่าแลกเปลี่ยน</b></h1>
+        <div class="row center">
+          <a href="#item" id="download-button" class="btn-large waves-effect waves-light red lighten-1">Get Started</a>
+        </div>
+        <br/><br/>
+      </div>
+    </section>
+  </div>
+
+  <section id="item">
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="strike">
+            <span>
+              <h4><b>SELECT</b></h4>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image card-img1">
+              <section id="img1">
+                <button id="reveal1" class="activator"><i class="material-icons" style="font-size: 13rem">toc</i></button>
+              </section>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image card-img2">
+              <section id="img2">
+                <button id="reveal2" class="activator"><i class="fa fa-calculator" style="font-size: 9rem"><jsp:text/></i></button>
+              </section>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image card-img3">
+              <section id="img3">
+                <button id="reveal3" class="activator"><i class="fa fa-newspaper-o" style="font-size: 9rem"><jsp:text/></i></button>
+              </section>
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br/><br/>
+    </div>
+  </section>
 </div>
