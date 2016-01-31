@@ -112,6 +112,24 @@
       margin-top: 100px;
       margin-left: 140px;
     }
+
+    @media screen and (max-device-width: 480px) and (orientation: portrait){
+      #idlogo{
+        height: 100px;
+      }
+      #idheader{
+        font-size: 3rem;
+      }
+      #reveal1{
+        margin-left: 50px;
+      }
+      #reveal2{
+        margin-left: 80px;
+      }
+      #reveal3{
+        margin-left: 70px;
+      }
+    }
   </style>
 
   <div id="index-banner">
@@ -119,11 +137,11 @@
       <div class="container">
         <br/><br/><br/><br/>
         <div class="row center">
-          <img src="${logo}" height="150px"/>
+          <img src="${logo}" height="150px" id="idlogo"/>
         </div>
-        <h1 class="header center white-text"><b>อัตราค่าแลกเปลี่ยน</b></h1>
+        <h1 class="header center white-text" id="idheader"><b>Currency Exchange Online</b></h1>
         <div class="row center">
-          <a href="#item" id="download-button" class="btn-large waves-effect waves-light red lighten-1">Get Started</a>
+          <a href="#item" id="select-button" class="btn-large waves-effect waves-light red lighten-1">Get Started</a>
         </div>
         <br/><br/>
       </div>
@@ -151,16 +169,16 @@
           <div class="card hoverable">
             <div class="card-image card-img1">
               <section id="img1">
-                <button id="reveal1" class="activator"><i class="material-icons" style="font-size: 13rem">toc</i></button>
+                  <button id="reveal1"><i class="material-icons" style="font-size: 13rem">toc</i></button>
               </section>
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">This is a link</a></p>
+              <span class="card-title activator grey-text text-darken-4" style="font-size: 2rem">อัตราแลกเปลี่ยน<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
+              <p><span class="card-title activator grey-text text-darken-4">รายละเอียด</span></p>
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <span class="card-title grey-text text-darken-4">อัตราแลกเปลี่ยน<i class="material-icons right">close</i></span>
+              <p>ดูอัตาราแลกเปลี่ยนต่อวัน และสามารถดูอัตราแลกเปลี่ยนย้อนหลังได้</p>
             </div>
           </div>
         </div>
@@ -169,16 +187,16 @@
           <div class="card hoverable">
             <div class="card-image card-img2">
               <section id="img2">
-                <button id="reveal2" class="activator"><i class="fa fa-calculator" style="font-size: 9rem"><jsp:text/></i></button>
+                <button id="reveal2"><i class="fa fa-calculator" style="font-size: 9rem"><jsp:text/></i></button>
               </section>
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">This is a link</a></p>
+              <span class="card-title activator grey-text text-darken-4" style="font-size: 2rem">คำนวณ<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
+              <p><span class="card-title activator grey-text text-darken-4">รายละเอียด</span></p>
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <span class="card-title grey-text text-darken-4">คำนวณ<i class="material-icons right">close</i></span>
+              <p>คำนวณอัตราแลกเปลี่ยนจากสกุลเงินต่างๆ เช่น ปอนด์ ยูโร เยน หยวน ดอลลาร์ ฯลฯ</p>
             </div>
           </div>
         </div>
@@ -187,16 +205,16 @@
           <div class="card hoverable">
             <div class="card-image card-img3">
               <section id="img3">
-                <button id="reveal3" class="activator"><i class="fa fa-newspaper-o" style="font-size: 9rem"><jsp:text/></i></button>
+                <button id="reveal3"><i class="fa fa-newspaper-o" style="font-size: 9rem"><jsp:text/></i></button>
               </section>
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              <p><a href="#">This is a link</a></p>
+              <span class="card-title activator grey-text text-darken-4" style="font-size: 2rem">ข่าว<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
+              <p><span class="card-title activator grey-text text-darken-4">รายละเอียด</span></p>
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <span class="card-title grey-text text-darken-4">ข่าว<i class="material-icons right">close</i></span>
+              <p>รวบรวมข่าวเกี่ยวกับ เศรษฐกิจ การเงิน ต่างๆ </p>
             </div>
           </div>
         </div>
