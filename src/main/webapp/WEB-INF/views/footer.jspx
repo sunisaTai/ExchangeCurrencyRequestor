@@ -2,38 +2,32 @@
 <div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" id="footer" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
+  <spring:url value="/resources/images/exchange.png" var="image1"/>
 
   <footer class="page-footer green lighten-1">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="white-text">Currency Exchange Online</h5>
+          <p class="grey-text text-lighten-4">เป็นเว็บที่จัดทำขึ้นเพื่อ อำนวยความสะดวกในเรื่องของอัตราแลกเปลี่ยน ซึ่งสามารถดูอัตราแลกเปลี่ยนในปัจจุบันแล้วอดีต และยังสามารถคำนวณอัตราแลกเปลี่ยนได้ รวมถึงยังมีข่าวด้านเศรษฐกิจ และการเงิน เพื่อให้ผู้ที่เข้ามาเยี่ยมชมเว็บไซต์ได้รับรู้ข่าวสารก่อนตัดสินใจ</p>
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
+          <center><img src="${image1}" style="height: 120px"><jsp:text/></img></center>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+          <h5 class="white-text">เมนูย่อย</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!">อัตราแลกเปลี่ยน</a></li>
+            <li><a class="white-text" href="#!">คำนวณ</a></li>
+            <li><a class="white-text" href="#!">ข่าว</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright green darken-1">
       <div class="container">
-        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        <span>© Made by Mr.Korrakote Manastrong and Ms.Sunisa Noomprasert</span>
       </div>
     </div>
   </footer>
