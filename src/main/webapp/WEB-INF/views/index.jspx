@@ -98,8 +98,8 @@
        cursor:pointer;
        overflow: hidden;
        outline:none;
-       margin-top: 70px;
-       margin-left: 110px;
+       /*margin-top: 70px;*/
+       /*margin-left: 110px;*/
      }
 
     #reveal2,#reveal3{
@@ -109,8 +109,8 @@
       cursor:pointer;
       overflow: hidden;
       outline:none;
-      margin-top: 100px;
-      margin-left: 140px;
+      /*margin-top: 100px;*/
+      /*margin-left: 140px;*/
     }
 
     @media screen and (max-device-width: 480px) and (orientation: portrait){
@@ -119,15 +119,6 @@
       }
       #idheader{
         font-size: 3rem;
-      }
-      #reveal1{
-        margin-left: 50px;
-      }
-      #reveal2{
-        margin-left: 80px;
-      }
-      #reveal3{
-        margin-left: 70px;
       }
     }
   </style>
@@ -167,17 +158,17 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="card hoverable">
-            <div class="card-image card-img1">
+            <div class="card-image card-img1 waves-effect waves-block waves-light">
               <section id="img1">
-                  <button id="reveal1"><i class="material-icons" style="font-size: 13rem">toc</i></button>
+                  <button id="reveal1" style="width:412px;height: 320px"><i class="material-icons" style="font-size: 13rem">toc</i></button>
               </section>
             </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4" style="font-size: 2rem">อัตราแลกเปลี่ยน<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
-              <p><span class="card-title activator grey-text text-darken-4">รายละเอียด</span></p>
+            <div class="card-content grey lighten-3">
+              <span class="card-title activator" style="font-size: 2rem">อัตราแลกเปลี่ยน<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
+              <p><span class="card-title activator">รายละเอียด</span></p>
             </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">อัตราแลกเปลี่ยน<i class="material-icons right">close</i></span>
+            <div class="card-reveal grey lighten-3">
+              <span class="card-title">อัตราแลกเปลี่ยน<i class="material-icons right">close</i></span>
               <p>ดูอัตาราแลกเปลี่ยนต่อวัน และสามารถดูอัตราแลกเปลี่ยนย้อนหลังได้</p>
             </div>
           </div>
@@ -185,17 +176,17 @@
 
         <div class="col s12 m4">
           <div class="card hoverable">
-            <div class="card-image card-img2">
+            <div class="card-image card-img2 waves-effect waves-block waves-light">
               <section id="img2">
-                <button id="reveal2"><i class="fa fa-calculator" style="font-size: 9rem"><jsp:text/></i></button>
+                <button id="reveal2" style="width:412px;height: 320px"><i class="fa fa-calculator" style="font-size: 9rem"><jsp:text/></i></button>
               </section>
             </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4" style="font-size: 2rem">คำนวณ<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
-              <p><span class="card-title activator grey-text text-darken-4">รายละเอียด</span></p>
+            <div class="card-content grey lighten-3">
+              <span class="card-title activator" style="font-size: 2rem">คำนวณ<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
+              <p><span class="card-title activator">รายละเอียด</span></p>
             </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">คำนวณ<i class="material-icons right">close</i></span>
+            <div class="card-reveal grey lighten-3">
+              <span class="card-title">คำนวณ<i class="material-icons right">close</i></span>
               <p>คำนวณอัตราแลกเปลี่ยนจากสกุลเงินต่างๆ เช่น ปอนด์ ยูโร เยน หยวน ดอลลาร์ ฯลฯ</p>
             </div>
           </div>
@@ -203,17 +194,17 @@
 
         <div class="col s12 m4">
           <div class="card hoverable">
-            <div class="card-image card-img3">
+            <div class="card-image card-img3 waves-effect waves-block waves-light">
               <section id="img3">
-                <button id="reveal3"><i class="fa fa-newspaper-o" style="font-size: 9rem"><jsp:text/></i></button>
+                <button id="reveal3" style="width:412px;height: 320px"><i class="fa fa-newspaper-o" style="font-size: 9rem"><jsp:text/></i></button>
               </section>
             </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4" style="font-size: 2rem">ข่าว<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
-              <p><span class="card-title activator grey-text text-darken-4">รายละเอียด</span></p>
+            <div class="card-content grey lighten-3">
+              <span class="card-title activator" style="font-size: 2rem">ข่าว<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
+              <p><span class="card-title activator">รายละเอียด</span></p>
             </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">ข่าว<i class="material-icons right">close</i></span>
+            <div class="card-reveal grey lighten-3">
+              <span class="card-title">ข่าว<i class="material-icons right">close</i></span>
               <p>รวบรวมข่าวเกี่ยวกับ เศรษฐกิจ การเงิน ต่างๆ </p>
             </div>
           </div>
@@ -222,5 +213,25 @@
       </div>
       <br/><br/>
     </div>
+
+    <div id="menu_button" class="fixed-action-btn click-to-toggle" style="bottom: 40px; right: 50px;">
+      <a class="btn-floating btn-large red waves-effect waves-light">
+        <i class="material-icons">reorder</i>
+      </a>
+      <ul>
+        <li>
+          <a class="btn-floating btn-large indigo darken-3 waves-effect waves-light" id="menu_button_currency" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="material-icons">toc</i></a>
+        </li>
+        <li>
+          <a class="btn-floating btn-large orange waves-effect waves-light" id="menu_button_calculate" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-calculator"><jsp:text/></i></a>
+        </li>
+        <li>
+          <a class="btn-floating btn-large green waves-effect waves-light" id="menu_button_news" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-newspaper-o"><jsp:text/></i></a>
+        </li>
+      </ul>
+    </div>
   </section>
+
+  <spring:url value="/resources/scripts/index/index.js" var="script" />
+  <script src="${script}" type="text/javascript"><!--Not Empty --></script>
 </div>
