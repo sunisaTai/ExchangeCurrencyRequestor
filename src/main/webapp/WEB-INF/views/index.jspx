@@ -20,7 +20,7 @@
       background-size: cover;
     }
     #sectionid{
-      background-color: rgba(67, 160, 71,0.5);
+      background-color: rgba(1, 87, 155,0.5);
       height: 500px;
     }
 
