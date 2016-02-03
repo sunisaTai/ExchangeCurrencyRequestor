@@ -11,7 +11,7 @@
   <jsp:useBean class="java.util.Date" id="now" scope="request" />
   <c:set var="user" value="${pageContext.request.userPrincipal.name}" scope="request" />
 
-  <footer class="page-footer green darken-2">
+  <footer class="page-footer  blue-grey darken-3" style="margin-top: 0">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright green darken-4">
+    <div class="footer-copyright blue-grey darken-4">
       <div class="container">
           <p class="grey-text text-lighten-4" style="margin-top: 0">© Made by Mr.Korrakote Manastrong and Ms.Sunisa Noomprasert</p>
       </div>
