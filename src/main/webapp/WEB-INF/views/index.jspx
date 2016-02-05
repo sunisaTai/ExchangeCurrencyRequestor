@@ -214,7 +214,7 @@
       <br/><br/>
     </div>
 
-    <div id="menu_button" class="fixed-action-btn click-to-toggle" style="bottom: 40px; right: 50px;">
+    <div id="menu_button" class="fixed-action-btn click-to-toggle" style="bottom: 40px; right: 20px;">
       <a class="btn-floating btn-large red waves-effect waves-light">
         <i class="material-icons">reorder</i>
       </a>
