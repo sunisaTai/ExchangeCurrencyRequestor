@@ -2,5 +2,27 @@
      xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:form="http://www.springframework.org/tags/form" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
-    CalculateCurrency
+
+    <spring:url value="/resources/images/pallarax2.jpg" var="pallarax1"/>
+
+    <style>
+        #img{
+            background-position: center center;
+            background-size: cover;
+            width: 100%;
+        }
+    </style>
+
+    <div class="container" id="body">
+        <img src="${pallarax1}" id="img"/>
+    </div>
+
+    <script>
+        $(window).ready(function() {
+            $('#img').css('height', window.innerHeight+'px');
+        });
+        $(window).resize(function() {
+            $('#img').css('height', window.innerHeight+'px');
+        });
+    </script>
 </div>
