@@ -3,11 +3,18 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
 
-    <spring:url value="/resources/images/pallarax2.jpg" var="pallarax1"/>
-    <spring:url value="/resources/images/currency.jpg" var="img1"/>
+    <spring:url value="/resources/images/parallax1.jpg" var="pallarax1"/>
+    <spring:url value="/resources/images/detail.png" var="img1"/>
     <spring:url value="/resources/images/icon-flag/us.png" var="us"/>
     <spring:url value="/resources/images/icon-flag/uk.png" var="uk"/>
     <spring:url value="/resources/images/icon-flag/jp.png" var="jp"/>
+    <spring:url value="/resources/images/icon-flag/eu.png" var="eu"/>
+    <spring:url value="/resources/images/icon-flag/my.png" var="my"/>
+    <spring:url value="/resources/images/icon-flag/sg.png" var="sg"/>
+    <spring:url value="/resources/images/icon-flag/cn.png" var="cn"/>
+    <spring:url value="/resources/images/icon-flag/kr.png" var="kr"/>
+    <spring:url value="/resources/images/icon-flag/la.png" var="la"/>
+    <spring:url value="/resources/images/icon-flag/au.png" var="au"/>
 
     <style>
         #banner {
@@ -36,12 +43,6 @@
             min-height: 800px;
         }
 
-        .card-panel{
-            margin-top: 0;
-            margin-bottom: 0;
-            min-height: 800px;
-        }
-
         #date{
             margin-top: 20px;
         }
@@ -52,9 +53,9 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <br/><br/>
-                <h1 class="header center teal-text text-lighten-5">อัตราแลกเปลี่ยน</h1>
+                <h1 class="header center white-text">อัตราแลกเปลี่ยน</h1>
                 <div class="row center">
-                    <h5 class="header col s12 teal-text text-lighten-5">Exchange Rates</h5>
+                    <h5 class="header col s12 white-text">Exchange Rates</h5>
                 </div>
                 <br/><br/>
 
@@ -64,49 +65,69 @@
     </div>
     <section id="sectionbody">
         <div class="container" id="body">
-            <div class="card-panel z-depth-2">
-                <div class="row">
-                    <center>
-                        <img src="${img1}" style="width: 350px;height: 350px"/>
-                    </center>
+            <div class="row">
+                <br/><br/>
+                <center>
+                    <img src="${img1}" class="z-depth-2 circle" style="width: 350px;height: 350px"/>
+                </center>
+            </div>
+            <div class="row">
+                <br/>
+                <div class="col s1 offset-s8">
+                    <h4 class="right">วันที่</h4>
                 </div>
-                <div class="row">
-                    <div class="col s1 offset-s8">
-                        <h4>วันที่ :</h4>
-                    </div>
-                    <div class="col s2">
-                        <input class="datepicker" type="date" id="date"><jsp:text/></input>
-                    </div>
-                    <div class="col s1">
-                        <p class="btn waves-effect waves-light red lighten-1" style="margin-top: 20px" id="search"><i class="material-icons">search</i></p>
-                    </div>
+                <div class="col s2">
+                    <input class="datepicker" type="date" id="date"><jsp:text/></input>
                 </div>
-                <div class="row" style="margin-top: 30px">
-                    <!--<div class="card-panel">-->
-                        <table class="highlight bordered">
-                            <thead>
-                                <tr>
-                                    <th rowspan="2"><center>ธนาคาร</center></th>
-                                    <th rowspan="1" colspan="2"><center><img src="${us}" class="z-depth-1 circle" style="width: 50px;height: 50px"/>USD</center></th>
-                                    <th rowspan="1" colspan="2"><center><img src="${uk}" style="width: 50px;height: 50px"/>GBP</center></th>
-                                    <th rowspan="1" colspan="2"><center><img src="${jp}" style="width: 50px;height: 50px"/>JPY</center></th>
-                                </tr>
-                                <tr>
-                                    <th><center>ซื้อ</center></th>
-                                    <th><center>ขาย</center></th>
-                                    <th><center>ซื้อ</center></th>
-                                    <th><center>ขาย</center></th>
-                                    <th><center>ซื้อ</center></th>
-                                    <th><center>ขาย</center></th>
-                                </tr>
-                            </thead>
-                            <tbody id="t_body">
-                               <jsp:text></jsp:text>
-                            </tbody>
-                        </table>
-                    <!--</div>-->
+                <div class="col s1">
+                    <p class="btn waves-effect waves-light red lighten-1" style="margin-top: 20px" id="search"><i class="material-icons">search</i></p>
                 </div>
             </div>
+            <div class="row" style="margin-top: 30px">
+                <table class="highlight bordered">
+                    <thead>
+                        <tr>
+                            <th rowspan="2"><center>ธนาคาร</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${us}" style="width: 40px;height: 40px"/>USD</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${uk}" style="width: 40px;height: 40px"/>GBP</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${jp}" style="width: 40px;height: 40px"/>JPY</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${eu}" style="width: 40px;height: 40px"/>EUR</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${my}" style="width: 40px;height: 40px"/>MYR</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${sg}" style="width: 40px;height: 40px"/>SGD</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${cn}" style="width: 40px;height: 40px"/>CNY</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${kr}" style="width: 40px;height: 40px"/>KRW</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${la}" style="width: 40px;height: 40px"/>LAK</center></th>
+                            <th rowspan="1" colspan="2"><center><img src="${au}" style="width: 40px;height: 40px"/>AUD</center></th>
+                        </tr>
+                        <tr>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                            <th><center>ซื้อ</center></th>
+                            <th><center>ขาย</center></th>
+                        </tr>
+                    </thead>
+                    <tbody id="t_body">
+                       <jsp:text></jsp:text>
+                    </tbody>
+                </table>
+            </div>
+            <br/><br/>
         </div>
 
         <div id="menu_button" class="fixed-action-btn click-to-toggle" style="bottom: 40px; right: 20px;">

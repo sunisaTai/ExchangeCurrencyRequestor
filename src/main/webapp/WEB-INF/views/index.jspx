@@ -8,9 +8,29 @@
   <spring:url value="/resources/images/card2.jpg" var="card2"/>
   <spring:url value="/resources/images/card3.jpg" var="card3"/>
   <spring:url value="/resources/images/logo.png" var="logo"/>
+  <spring:url value="/resources/images/tay.png" var="tay"/>
+  <spring:url value="/resources/images/jay.png" var="jay"/>
+  <spring:url value="/resources/images/jay.png" var="jay"/>
+  <spring:url value="/resources/images/logo-app/MaterializeCSS-logo.png" var="material"/>
+  <spring:url value="/resources/images/logo-app/ajax1.png" var="ajax"/>
+  <spring:url value="/resources/images/logo-app/hibernate.png" var="hibernate"/>
+  <spring:url value="/resources/images/logo-app/java-logo.png" var="java"/>
+  <spring:url value="/resources/images/logo-app/jquery_logo.png" var="jquery"/>
+  <spring:url value="/resources/images/logo-app/spring.png" var="spring"/>
 
   <style>
 
+    #social{
+      background-color: #bdbdbd;
+      border-radius: 50%;
+      color: rgb(66, 87, 106);
+      display: inline-block;
+      font-size: 34px;
+      height: 60px;
+      line-height: 60px;
+      transition: all 0.2s ease 0s;
+      width: 60px;
+    }
 
     #index-banner {
       background: url("${url_background}") no-repeat center center ;
@@ -20,8 +40,7 @@
       background-size: cover;
     }
     #sectionid{
-      background-color: rgba(1, 87, 155,0.5);
-      height: 500px;
+      background-color: rgba(0, 0, 0,0.5);
     }
 
     .strike {
@@ -87,7 +106,7 @@
     }
 
     #img1,#img2,#img3{
-      background-color: rgba(176, 190, 197,0.7);
+      background-color: rgba(255, 255, 255,0.5);
       height: 320px;
     }
 
@@ -112,6 +131,19 @@
       /*margin-top: 100px;*/
       /*margin-left: 140px;*/
     }
+    .card{
+      opacity: 0;
+    }
+
+    #createby{
+      background-color: #eceff1;
+      padding: 50px 0;
+    }
+
+    ul.social-icons li{
+      display: inline-block;
+      padding: 10px 10px;
+    }
 
     @media screen and (max-device-width: 480px) and (orientation: portrait){
       #idlogo{
@@ -125,10 +157,11 @@
 
   <div id="index-banner">
     <section id="sectionid">
-      <div class="container">
-        <br/><br/><br/><br/>
+      <div class="container" id="contain">
+        <div class="group"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+        <div class="group2"><br/><br/><br/><br/><br/></div>
         <div class="row center">
-          <img src="${logo}" height="150px" id="idlogo"/>
+          <img src="${logo}" height="200px" id="idlogo"/>
         </div>
         <h1 class="header center white-text" id="idheader"><b>Currency Exchange Online</b></h1>
         <div class="row center">
@@ -139,14 +172,14 @@
     </section>
   </div>
 
-  <section id="item">
 
+  <section id="item">
     <div class="container">
       <div class="row">
         <div class="col s12">
           <div class="strike">
             <span>
-              <h4><b>SELECT</b></h4>
+              <h3><b>SELECT</b></h3>
             </span>
           </div>
         </div>
@@ -160,16 +193,16 @@
           <div class="card hoverable">
             <div class="card-image card-img1 waves-effect waves-block waves-light">
               <section id="img1">
-                  <button id="reveal1" style="width:412px;height: 320px"><i class="material-icons" style="font-size: 13rem">toc</i></button>
+                  <button id="reveal1" style="width:412px;height: 320px"><i class="material-icons " style="font-size: 13rem">toc</i></button>
               </section>
             </div>
-            <div class="card-content grey lighten-3">
-              <span class="card-title activator" style="font-size: 2rem">อัตราแลกเปลี่ยน<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
-              <p><span class="card-title activator">รายละเอียด</span></p>
+            <div class="card-content red accent-1">
+              <span class="card-title activator white-text" style="font-size: 2rem">อัตราแลกเปลี่ยน<i class="material-icons right white-text" style="margin-top: 10px">more_vert</i></span>
+              <p><span class="card-title activator white-text">รายละเอียด</span></p>
             </div>
-            <div class="card-reveal grey lighten-3">
-              <span class="card-title">อัตราแลกเปลี่ยน<i class="material-icons right">close</i></span>
-              <p>ดูอัตาราแลกเปลี่ยนต่อวัน และสามารถดูอัตราแลกเปลี่ยนย้อนหลังได้</p>
+            <div class="card-reveal blue-grey darken-1">
+              <span class="card-title white-text">อัตราแลกเปลี่ยน<i class="material-icons right">close</i></span>
+              <p class="white-text">ดูอัตาราแลกเปลี่ยนต่อวัน และสามารถดูอัตราแลกเปลี่ยนย้อนหลังได้</p>
             </div>
           </div>
         </div>
@@ -178,16 +211,16 @@
           <div class="card hoverable">
             <div class="card-image card-img2 waves-effect waves-block waves-light">
               <section id="img2">
-                <button id="reveal2" style="width:412px;height: 320px"><i class="fa fa-calculator" style="font-size: 9rem"><jsp:text/></i></button>
+                <button id="reveal2" style="width:412px;height: 320px"><i class="fa fa-calculator " style="font-size: 9rem"><jsp:text/></i></button>
               </section>
             </div>
-            <div class="card-content grey lighten-3">
-              <span class="card-title activator" style="font-size: 2rem">คำนวณ<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
-              <p><span class="card-title activator">รายละเอียด</span></p>
+            <div class="card-content red accent-1">
+              <span class="card-title activator white-text" style="font-size: 2rem">คำนวณ<i class="material-icons right white-text" style="margin-top: 10px">more_vert</i></span>
+              <p><span class="card-title activator white-text">รายละเอียด</span></p>
             </div>
-            <div class="card-reveal grey lighten-3">
-              <span class="card-title">คำนวณ<i class="material-icons right">close</i></span>
-              <p>คำนวณอัตราแลกเปลี่ยนจากสกุลเงินต่างๆ เช่น ปอนด์ ยูโร เยน หยวน ดอลลาร์ ฯลฯ</p>
+            <div class="card-reveal  blue-grey darken-1">
+              <span class="card-title white-text">คำนวณ<i class="material-icons right white-text">close</i></span>
+              <p class="white-text">คำนวณอัตราแลกเปลี่ยนจากสกุลเงินต่างๆ เช่น ปอนด์ ยูโร เยน หยวน ดอลลาร์ ฯลฯ</p>
             </div>
           </div>
         </div>
@@ -196,16 +229,16 @@
           <div class="card hoverable">
             <div class="card-image card-img3 waves-effect waves-block waves-light">
               <section id="img3">
-                <button id="reveal3" style="width:412px;height: 320px"><i class="fa fa-newspaper-o" style="font-size: 9rem"><jsp:text/></i></button>
+                <button id="reveal3" style="width:412px;height: 320px"><i class="fa fa-newspaper-o " style="font-size: 9rem"><jsp:text/></i></button>
               </section>
             </div>
-            <div class="card-content grey lighten-3">
-              <span class="card-title activator" style="font-size: 2rem">ข่าว<i class="material-icons right" style="margin-top: 10px">more_vert</i></span>
-              <p><span class="card-title activator">รายละเอียด</span></p>
+            <div class="card-content red accent-1">
+              <span class="card-title activator white-text" style="font-size: 2rem">ข่าว<i class="material-icons right white-text" style="margin-top: 10px">more_vert</i></span>
+              <p><span class="card-title activator white-text">รายละเอียด</span></p>
             </div>
-            <div class="card-reveal grey lighten-3">
-              <span class="card-title">ข่าว<i class="material-icons right">close</i></span>
-              <p>รวบรวมข่าวเกี่ยวกับ เศรษฐกิจ การเงิน ต่างๆ </p>
+            <div class="card-reveal  blue-grey darken-1">
+              <span class="card-title white-text">ข่าว<i class="material-icons right white-text">close</i></span>
+              <p class="white-text">รวบรวมข่าวเกี่ยวกับ เศรษฐกิจ การเงิน ต่างๆ </p>
             </div>
           </div>
         </div>
@@ -213,25 +246,84 @@
       </div>
       <br/><br/>
     </div>
+  </section>
 
-    <div id="menu_button" class="fixed-action-btn click-to-toggle" style="bottom: 40px; right: 20px;">
-      <a class="btn-floating btn-large red waves-effect waves-light">
-        <i class="material-icons">reorder</i>
-      </a>
-      <ul>
-        <li>
-          <a class="btn-floating btn-large indigo darken-3 waves-effect waves-light" id="menu_button_currency" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="material-icons">toc</i></a>
-        </li>
-        <li>
-          <a class="btn-floating btn-large orange waves-effect waves-light" id="menu_button_calculate" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-calculator"><jsp:text/></i></a>
-        </li>
-        <li>
-          <a class="btn-floating btn-large green waves-effect waves-light" id="menu_button_news" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-newspaper-o"><jsp:text/></i></a>
-        </li>
-      </ul>
+  <section id="createby">
+    <div class="container">
+      <h3><center>CREATE BY</center></h3>
+      <div class="row" style="margin-bottom: 0">
+        <div class="col s6 l6">
+          <center><img src="${jay}" class="z-depth-1 circle" style="height: 150px;width: 150px"/></center>
+          <center><h5>นาย กรกฏ มนัสตรง</h5></center>
+          <center><h5>สาขา วิทยาการคอมพิวเตอร์ คณะ เทคโนโลยีสารสนเทศ</h5></center>
+          <center><h5>มหาวิทยาลัยนอร์ทกรุงเทพ</h5></center><br/>
+          <center><a href="#" id="social"><i class="fa fa-facebook"><jsp:text/></i></a></center>
+        </div>
+        <div class="col s6 l6">
+          <center><img src="${tay}" class="z-depth-1 circle" style="height: 150px;width: 150px"/></center>
+          <center><h5>นางสาว สุนิสา นุ่มประเสริฐ</h5></center>
+          <center><h5>สาขา วิทยาการคอมพิวเตอร์ คณะ เทคโนโลยีสารสนเทศ</h5></center>
+          <center><h5>มหาวิทยาลัยนอร์ทกรุงเทพ</h5></center><br/>
+          <center><a href="#" id="social"><i class="fa fa-facebook"><jsp:text/></i></a></center>
+        </div>
+      </div>
+      <div class="row">
+        <ul class="social-icons">
+          <center>
+            <li>
+              <a><img src="${material}" style="width: 70px;height: 70px"><jsp:text/></img></a>
+            </li>
+            <li>
+              <a><img src="${ajax}" style="width: 90px;height: 80px"><jsp:text/></img></a>
+            </li>
+            <li>
+              <a><img src="${java}" style="width: 90px;height: 80px"><jsp:text/></img></a>
+            </li>
+            <li>
+              <a><img src="${jquery}" style="width: 90px;height: 80px"><jsp:text/></img></a>
+            </li>
+            <li>
+              <a><img src="${spring}" style="width: 100px;height: 100px"><jsp:text/></img></a>
+            </li>
+            <li>
+              <a><img src="${hibernate}" style="width: 90px;height: 80px"><jsp:text/></img></a>
+            </li>
+          </center>
+        </ul>
+      </div>
     </div>
   </section>
 
+  <div id="menu_button" class="fixed-action-btn click-to-toggle" style="bottom: 40px; right: 20px;">
+    <a class="btn-floating btn-large red waves-effect waves-light">
+      <i class="material-icons">reorder</i>
+    </a>
+    <ul>
+      <li>
+        <a class="btn-floating btn-large indigo darken-3 waves-effect waves-light" id="menu_button_currency" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="material-icons">toc</i></a>
+      </li>
+      <li>
+        <a class="btn-floating btn-large orange waves-effect waves-light" id="menu_button_calculate" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-calculator"><jsp:text/></i></a>
+      </li>
+      <li>
+        <a class="btn-floating btn-large green waves-effect waves-light" id="menu_button_news" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="fa fa-newspaper-o"><jsp:text/></i></a>
+      </li>
+    </ul>
+  </div>
+
   <spring:url value="/resources/scripts/index/index.js" var="script" />
   <script src="${script}" type="text/javascript"><!--Not Empty --></script>
+
+  <script>
+    $(window).ready(function() {
+      $('#index-banner').css('height', window.innerHeight+'px');
+      $('#sectionid').css('height', window.innerHeight+'px');
+      $('#contain').css('height', window.innerHeight+'px');
+    });
+    $(window).resize(function() {
+      $('#index-banner').css('height', window.innerHeight+'px');
+      $('#sectionid').css('height', window.innerHeight+'px');
+      $('#contain').css('height', window.innerHeight+'px');
+    });
+  </script>
 </div>

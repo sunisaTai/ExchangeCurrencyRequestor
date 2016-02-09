@@ -5,24 +5,34 @@
 
     <spring:url value="/resources/images/pallarax2.jpg" var="pallarax1"/>
 
-    <style>
-        #img{
-            background-position: center center;
-            background-size: cover;
-            width: 100%;
-        }
-    </style>
 
-    <div class="container" id="body">
-        <img src="${pallarax1}" id="img"/>
+    <div class="slider">
+        <section>
+            <ul class="slides">
+                <li>
+                    <img src="http://lorempixel.com/580/250/nature/1"/> <!-- random image -->
+                </li>
+                <li>
+                    <img src="http://lorempixel.com/580/250/nature/2"/> <!-- random image -->
+                </li>
+                <li>
+                    <img src="http://lorempixel.com/580/250/nature/3"/> <!-- random image -->
+                </li>
+                <li>
+                    <img src="http://lorempixel.com/580/250/nature/4"/> <!-- random image -->
+                </li>
+            </ul>
+            <div class="container">
+                <h3>aaaaaaaa</h3>
+
+            </div>
+        </section>
     </div>
 
+
     <script>
-        $(window).ready(function() {
-            $('#img').css('height', window.innerHeight+'px');
-        });
-        $(window).resize(function() {
-            $('#img').css('height', window.innerHeight+'px');
+        $(document).ready(function(){
+            $('.slider').slider({full_width: true});
         });
     </script>
 </div>
