@@ -5,13 +5,13 @@
      version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
-  <spring:url value="/resources/images/exchange.png" var="image1"/>
+  <spring:url value="/resources/images/currency.png" var="image1"/>
 
   <c:set var="lang" value="${fn:toUpperCase(pageContext.response.locale)}" scope="request" />
   <jsp:useBean class="java.util.Date" id="now" scope="request" />
   <c:set var="user" value="${pageContext.request.userPrincipal.name}" scope="request" />
 
-  <footer class="page-footer  blue-grey darken-3" style="margin-top: 0">
+  <footer class="page-footer cyan darken-3" style="margin-top: 0">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -32,11 +32,11 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright blue-grey darken-4">
-      <div class="container">
-          <p class="grey-text text-lighten-4" style="margin-top: 0">© Made by Mr.Korrakote Manastrong and Ms.Sunisa Noomprasert</p>
-      </div>
-    </div>
+    <!--<div class="footer-copyright blue-grey darken-3">-->
+      <!--<div class="container">-->
+          <!--<p class="grey-text text-lighten-4" style="margin-top: 0">© Made by Mr.Korrakote Manastrong and Ms.Sunisa Noomprasert</p>-->
+      <!--</div>-->
+    <!--</div>-->
   </footer>
 
   <script type="text/javascript">

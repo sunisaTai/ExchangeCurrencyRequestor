@@ -10,10 +10,14 @@ $(document).ready(function () {
         reveal2.style.width='265px';
         reveal3.style.width='265px';
 
+        $(".group").addClass("hide");
+        $(".group2").removeClass("hide");
         if(window.screen.width <=320) {
             $("#menu_button").addClass("hide");
             $("#img-footer").addClass("hide");
             $("#menu-footer").addClass("hide");
+            $(".group").addClass("hide");
+            $(".group2").removeClass("hide");
             reveal1.style.width = '288px';
             reveal2.style.width = '288px';
             reveal3.style.width = '288px';
@@ -22,6 +26,8 @@ $(document).ready(function () {
         $("#menu_button").removeClass("hide");
         $("#img-footer").removeClass("hide");
         $("#menu-footer").removeClass("hide");
+        $(".group").removeClass("hide");
+        $(".group2").addClass("hide");
     }
 
 });
@@ -61,4 +67,9 @@ $("#sub_menu_calculate").on('click',function(){
 $("#sub_menu_news").on('click',function(){
     window.location.href = session.context+'/news/view?inquiry';
 });
+
+var options = [
+    {selector: '.card', offset: 300, callback: 'Materialize.fadeInImage(".card")' },
+];
+Materialize.scrollFire(options);
 
