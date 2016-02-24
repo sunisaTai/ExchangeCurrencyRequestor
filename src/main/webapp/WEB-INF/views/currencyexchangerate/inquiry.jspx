@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
 
-    <spring:url value="/resources/images/parallax1.jpg" var="pallarax1"/>
+    <spring:url value="/resources/images/parallax3.png" var="pallarax1"/>
     <spring:url value="/resources/images/detail.png" var="img1"/>
     <spring:url value="/resources/images/icon-flag/us.png" var="us"/>
     <spring:url value="/resources/images/icon-flag/uk.png" var="uk"/>

@@ -3,36 +3,53 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
 
-    <spring:url value="/resources/images/pallarax2.jpg" var="pallarax1"/>
+    <spring:url value="/resources/images/parallax3.png" var="pallarax"/>
+    <spring:url value="/resources/images/calculate.png" var="img1"/>
 
+    <style>
+        a:hover{
+            color: #00b0ff;
+        }
+    </style>
 
-    <div class="slider">
-        <section>
-            <ul class="slides">
-                <li>
-                    <img src="http://lorempixel.com/580/250/nature/1"/> <!-- random image -->
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/580/250/nature/2"/> <!-- random image -->
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/580/250/nature/3"/> <!-- random image -->
-                </li>
-                <li>
-                    <img src="http://lorempixel.com/580/250/nature/4"/> <!-- random image -->
-                </li>
-            </ul>
-            <div class="container">
-                <h3>aaaaaaaa</h3>
-
+    <div id="banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container" style="padding-top: 90px">
+                <h1 class="header center white-text">คำนวณ</h1>
+                <div class="row center">
+                    <h5 class="header col s12 white-text">Calculate</h5>
+                </div>
             </div>
-        </section>
+        </div>
+        <div class="parallax"><img src="${pallarax}" alt="Unsplashed background img 1"/></div>
     </div>
+    <section id="sectionbody">
+        <div class="container" id="body">
+            <div class="row">
+                <br/><br/>
+                <center>
+                    <img src="${img1}" class="z-depth-2 circle" style="width: 350px;height: 350px"/>
+                </center>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <h2>เมนู (Menu)</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <a href="#" class="hover" style="color: black">คำนวณราคาซื้อ</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <script type="text/javascript">
+        (function($){
+            $(function(){
+                $('.parallax').parallax();
+            }); // end of document ready
+        })(jQuery); // end of jQuery name space
 
-    <script>
-        $(document).ready(function(){
-            $('.slider').slider({full_width: true});
-        });
     </script>
 </div>
